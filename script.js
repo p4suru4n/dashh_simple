@@ -1,21 +1,23 @@
 let ip_ccms = [
   2, 200, 211, 11, 12, 14, 15, 19, 20, 21, 22, 24, 25, 29, 31, 32, 39, 40, 41,
   42, 49, 51, 52, 53, 54, 55, 56, 156, 50, 61, 62, 64, 65, 60, 69, 222, 3, 215,
-  210, 220, 224, 207, 71, 217, 72, 70, 79, 208, 82, 80, 89, 209, 91, 92, 90, 99,
+  210, 220, 224, 207, 71, 234, 72, 70, 79, 208, 82, 80, 89, 209, 91, 92, 90, 99,
   101, 100, 102, 104, 105, 106, 107, 108,
 ];
 
 async function refreshStatus() {
-  const res = await fetch(
-    "https://wake-cookies-mens-quiz.trycloudflare.com/api/status",
-  );
+  const res = await fetch("https://wake-cookies-mens-quiz.trycloudflare.com/api/status");
   // const res = await fetch("/api/status");
   const data = await res.json();
+  // const now = Date.now();
+  // const online = now - data.lastSeen < 5000;
+  //console.log(data.dua);
+  // devices = data
   animasikan(data);
 }
 
 refreshStatus();
-setInterval(refreshStatus, 60 * 1000);
+setInterval(refreshStatus, 30 * 1000);
 
 /* ===== 6 DEVICE ON/OFF ===== */
 const devices = [
@@ -57,9 +59,9 @@ const devices = [
     data: [
       { label: "Status", value: "" },
       { label: "", value: "" },
-      { label: "", value: "" },
-      { label: "", value: "" },
-      { label: "", value: "" },
+      { label: "OFF (mnt)", value: "" },
+      { label: "ON (mnt)", value: "" },
+      { label: "Hour Meter", value: "" },
     ],
     status: "off",
   },
@@ -68,9 +70,9 @@ const devices = [
     data: [
       { label: "Status", value: "" },
       { label: "", value: "" },
-      { label: "", value: "" },
-      { label: "", value: "" },
-      { label: "", value: "" },
+      { label: "OFF (mnt)", value: "" },
+      { label: "ON (mnt)", value: "" },
+      { label: "Hour Meter", value: "" },
     ],
     status: "off",
   },
@@ -79,9 +81,9 @@ const devices = [
     data: [
       { label: "Status", value: "" },
       { label: "Level Air", value: "" },
-      { label: "", value: "" },
-      { label: "", value: "" },
-      { label: "", value: "" },
+      { label: "OFF (mnt)", value: "" },
+      { label: "ON (mnt)", value: "" },
+      { label: "Hour Meter", value: "" },
     ],
     status: "off",
   },
@@ -89,12 +91,12 @@ const devices = [
 
 const deviceGrid = document.getElementById("deviceGrid");
 
-devices.forEach((device) => {
+devices.forEach(device => {
   const div = document.createElement("div");
   div.className = "device";
 
   let dataHTML = "";
-  device.data.forEach((d) => {
+  device.data.forEach(d => {
     dataHTML += `<div class="row">${d.label}: <b class="isi">${d.value}</b></div>`;
   });
 
@@ -110,16 +112,15 @@ devices.forEach((device) => {
 });
 
 function animasikan(data) {
-  let ok = document.getElementsByClassName("isi");
-  // LISTRIK
-  ok[0].textContent = data.satu[0].data[0].value + " Jt";
-  ok[1].textContent = data.satu[0].data[1].value;
+  let ok = document.getElementsByClassName('isi')
+  ok[0].textContent = data.satu[0].data[0].value + " Jt"
+  ok[1].textContent = data.satu[0].data[1].value
 
-  ok[5].textContent = data.satu[1].data[0].value + " Jt";
-  ok[6].textContent = data.satu[1].data[1].value;
+  ok[5].textContent = data.satu[1].data[0].value + " Jt"
+  ok[6].textContent = data.satu[1].data[1].value
 
-  ok[10].textContent = data.satu[2].data[0].value + " Jt";
-  ok[11].textContent = data.satu[2].data[1].value;
+  ok[10].textContent = data.satu[2].data[0].value + " Jt"
+  ok[11].textContent = data.satu[2].data[1].value
 
   // TANDON
   ok[15].textContent = data.satu[3].data[0].value;
@@ -136,21 +137,24 @@ function animasikan(data) {
   ok[28].textContent = data.satu[5].data[3].value;
   ok[29].textContent = data.satu[5].data[4].value;
 
-  ok = document.getElementsByClassName("bt");
-  ok[3].className = "bt " + data.satu[3].status;
-  ok[3].textContent = data.satu[3].status.toUpperCase();
-  ok[4].className = "bt " + data.satu[4].status;
-  ok[4].textContent = data.satu[4].status.toUpperCase();
-  ok[5].className = "bt " + data.satu[5].status;
-  ok[5].textContent = data.satu[5].status.toUpperCase();
+  ok = document.getElementsByClassName('bt')
+  ok[3].className = 'bt ' + data.satu[3].status
+  ok[3].textContent = data.satu[3].status.toUpperCase()
+  ok[4].className = 'bt ' + data.satu[4].status
+  ok[4].textContent = data.satu[4].status.toUpperCase()
+  ok[5].className = 'bt ' + data.satu[5].status
+  ok[5].textContent = data.satu[5].status.toUpperCase()
 
-  let iki = JSON.parse(data.dua);
-  // let iki = data.dua;
+  let iki = JSON.parse(data.dua)
+  //let iki = data.dua
   const aktifSet = new Set(iki);
-  ok = document.getElementsByClassName("ping");
+  ok = document.getElementsByClassName('ping')
+
   for (let i = 0; i < ip_ccms.length; i++) {
     const ip = ip_ccms[i];
 
-    ok[i].className = "ping " + (aktifSet.has(ip) ? "online" : "offline");
+    ok[i].className =
+      'ping ' + (aktifSet.has(ip) ? 'online' : 'offline');
   }
+
 }
