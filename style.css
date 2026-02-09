@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+}
+
+header {
+  background: #263238;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* ====== 6 ON/OFF ====== */
+.grid-6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.device {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.device span {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.on {
+  background: #2e7d32;
+}
+
+.off {
+  background: #c62828;
+}
+
+/* ====== 100 PING ====== */
+.grid-100 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 8px;
+}
+
+.ping {
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.online {
+  background: #43a047;
+}
+
+.offline {
+  background: #e53935;
+}
+
+.ip-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ip-list li {
+  padding: 4px 0;
+}
+
+.jalur {
+  background-color: aqua;
+  text-align: center;
+}
