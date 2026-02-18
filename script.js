@@ -6,7 +6,7 @@ let ip_ccms = [
 ];
 
 async function refreshStatus() {
-  const res = await fetch("https://wake-cookies-mens-quiz.trycloudflare.com/api/status");
+  const res = await fetch("https://ghz-bias-guidelines-two.trycloudflare.com/api/status");
   // const res = await fetch("/api/status");
   const data = await res.json();
   // const now = Date.now();
