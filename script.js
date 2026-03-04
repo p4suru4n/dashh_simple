@@ -154,72 +154,87 @@ function animasikan(data) {
 
     ok[i].className = "ping " + (aktifSet.has(ip) ? "online" : "offline");
   }
+
+  ok = document.getElementsByClassName("isi1");
+  //
+  ok[30].textContent = data.tiga[5].data[0].value;
+  ok[31].textContent = data.tiga[5].data[1].value;
+  ok[32].textContent = data.tiga[5].data[2].value;
+  ok[33].textContent = data.tiga[5].data[3].value;
+  ok[34].textContent = data.tiga[5].data[4].value;
+  ok[35].textContent = data.tiga[5].data[5].value;
 }
 
 const devices1 = [
   {
     name: "B-PLANT JL1",
     data: [
-      { label: "Mixer", value: "" },
-      { label: "Bucket", value: "" },
-      { label: "Matrial", value: "" },
-      { label: "Air&Obat", value: "" },
-      { label: "", value: "" },
+      { label: "EMG", value: "" },
+      { label: "MIX", value: "" },
+      { label: "BUCK", value: "" },
+      { label: "MAT", value: "" },
+      { label: "SILO", value: "" },
+      { label: "PROX", value: "" },
     ],
     status: "off",
   },
   {
     name: "B-PLANT JL2",
     data: [
-      { label: "Mixer", value: "" },
-      { label: "Bucket", value: "" },
-      { label: "Matrial", value: "" },
-      { label: "Air&Obat", value: "" },
-      { label: "", value: "" },
+      { label: "EMG", value: "" },
+      { label: "MIX", value: "" },
+      { label: "BUCK", value: "" },
+      { label: "MAT", value: "" },
+      { label: "SILO", value: "" },
+      { label: "PROX", value: "" },
     ],
     status: "off",
   },
   {
     name: "B-PLANT JL3",
     data: [
-      { label: "Mixer", value: "" },
-      { label: "Bucket", value: "" },
-      { label: "Matrial", value: "" },
-      { label: "Air&Obat", value: "" },
-      { label: "", value: "" },
+      { label: "EMG", value: "" },
+      { label: "MIX", value: "" },
+      { label: "BUCK", value: "" },
+      { label: "MAT", value: "" },
+      { label: "SILO", value: "" },
+      { label: "PROX", value: "" },
     ],
     status: "off",
   },
   {
     name: "B-PLANT JL4",
     data: [
-      { label: "Mixer", value: "" },
-      { label: "Bucket", value: "" },
-      { label: "Matrial", value: "" },
-      { label: "Air&Obat", value: "" },
-      { label: "", value: "" },
+      { label: "EMG", value: "" },
+      { label: "MIX", value: "" },
+      { label: "BUCK", value: "" },
+      { label: "MAT", value: "" },
+      { label: "SILO", value: "" },
+      { label: "PROX", value: "" },
     ],
     status: "off",
   },
   {
     name: "B-PLANT JL5",
     data: [
-      { label: "Mixer", value: "" },
-      { label: "Bucket", value: "" },
-      { label: "Matrial", value: "" },
-      { label: "Air&Obat", value: "" },
-      { label: "", value: "" },
+      { label: "EMG", value: "" },
+      { label: "MIX", value: "" },
+      { label: "BUCK", value: "" },
+      { label: "MAT", value: "" },
+      { label: "SILO", value: "" },
+      { label: "PROX", value: "" },
     ],
     status: "off",
   },
   {
     name: "B-PLANT JL6",
     data: [
-      { label: "Mixer", value: "" },
-      { label: "Bucket", value: "" },
-      { label: "Matrial", value: "" },
-      { label: "Air&Obat", value: "" },
-      { label: "", value: "" },
+      { label: "EMG", value: "" },
+      { label: "MIX", value: "" },
+      { label: "BUCK", value: "" },
+      { label: "MAT", value: "" },
+      { label: "SILO", value: "" },
+      { label: "PROX", value: "" },
     ],
     status: "off",
   },
