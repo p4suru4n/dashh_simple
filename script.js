@@ -7,7 +7,7 @@ let ip_ccms = [
 
 async function refreshStatus() {
   const res = await fetch(
-    "https://sage-sparc-neutral-superior.trycloudflare.com/api/status",
+    "https://drag-media-finding-equations.trycloudflare.com/api/status",
     // "/api/status",
   );
   // const res = await fetch("/api/status");
