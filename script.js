@@ -7,7 +7,7 @@ let ip_ccms = [
 
 async function refreshStatus() {
   const res = await fetch(
-    "https://quotes-cables-refers-must.trycloudflare.com/api/status",
+    "https://nextel-christopher-minimum-wash.trycloudflare.com/api/status",
     // "/api/status",
   );
   // const res = await fetch("/api/status");
