@@ -14,9 +14,9 @@ refreshStatus();
 setInterval(refreshStatus, 60 * 1000);
 
 function detikKeMenit(detik) {
-  const jam = Math.floor(detik / 3600);
-  const menit = Math.floor(detik / 60);
-  const sisaDetik = detik % 60;
+  const jam = Math.floor(detik / 7200);
+  const menit = Math.floor(detik / 120);
+  const sisaDetik = detik % 120;
 
   return `${jam} j ${menit} m ${sisaDetik} s`;
 }
