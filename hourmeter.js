@@ -43,6 +43,24 @@ const devices1 = [
     ],
     status: "off",
   },
+  {
+    name: "HOIST JL3 TENGAH",
+    data: [
+      { label: "HOIST", value: "" },
+      { label: "TRAVELING", value: "" },
+      { label: "ENDCARRIAGE", value: "" },
+    ],
+    status: "off",
+  },
+  {
+    name: "HOIST JL3 BARAT",
+    data: [
+      { label: "HOIST", value: "" },
+      { label: "TRAVELING", value: "" },
+      { label: "ENDCARRIAGE", value: "" },
+    ],
+    status: "off",
+  },
 ];
 
 const deviceGrid1 = document.getElementById("deviceGrid1");
