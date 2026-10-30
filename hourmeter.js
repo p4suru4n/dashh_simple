@@ -18,7 +18,7 @@ function detikKeMenit(detik) {
   const menit = Math.floor(detik / 60);
   const sisaDetik = detik % 60;
 
-  return `${jam} j ${menit} m`;
+  return `${jam} j ${menit} m ${sisaDetik} s`;
 }
 
 function animasikan(data) {
