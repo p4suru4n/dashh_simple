@@ -8,7 +8,7 @@ let ip_ccms = [
 // Ambil data JSON
 async function refreshStatus() {
   const res = await fetch(
-    "https://hearts-conferencing-annual-simpson.trycloudflare.com/api/status",
+    "https://budapest-back-stood-discuss.trycloudflare.com/api/status",
     // "/api/status",
   );
   // const res = await fetch("/api/status");
